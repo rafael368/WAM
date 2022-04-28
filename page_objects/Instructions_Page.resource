@@ -2,4 +2,4 @@
 Documentation           Login Page objects mapping
 
 *** Variables ***
-${Label_Instructions}                             xpath://div[@id='b20-TitleWrapper']
+${Label_Instructions}                             xpath://div[@id='b20-TitleWrapper'].
