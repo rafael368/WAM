@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220428 09:18:38.310" rpa="false" schemaversion="3">
+<suite id="s1" name="Instructions" source="C:\WAM\tests\web\Instructions.robot">
+<test id="s1-t1" name="CT009_WAM - Validar Criação de Instructions" line="11">
+<kw name="Dado eu acesse o WAM" library="Login">
+<arg>${OS_WAM_ADMIN}</arg>
+<arg>${PASS_WAM}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220428 09:18:38.507" level="INFO">Opening browser 'chrome' to base url 'https://sonae-pp.outsystemsenterprise.com/wortenactivationmanagerr'.</msg>
+<status status="PASS" starttime="20220428 09:18:38.507" endtime="20220428 09:18:41.135"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220428 09:18:41.136" endtime="20220428 09:18:41.267"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LoginPage_Title}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220428 09:18:41.267" endtime="20220428 09:18:45.527"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Username_Field}</arg>
+<arg>${LoginWAM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:45.528" level="INFO">Typing text 'WAM_TESTE_2' into text field 'xpath://input[@name='username']'.</msg>
+<status status="PASS" starttime="20220428 09:18:45.528" endtime="20220428 09:18:45.600"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Password_Field}</arg>
+<arg>${PASS_WAM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:45.600" level="INFO">Typing text 'Password123!' into text field 'xpath://input[@name='password']'.</msg>
+<status status="PASS" starttime="20220428 09:18:45.600" endtime="20220428 09:18:45.673"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:18:46.586" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-406.png"&gt;&lt;img src="selenium-screenshot-406.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:18:45.673" endtime="20220428 09:18:46.586"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Login_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:46.587" level="INFO">Clicking element 'xpath://input[@value='Login']'.</msg>
+<status status="PASS" starttime="20220428 09:18:46.586" endtime="20220428 09:18:48.853"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WAM_Homepage}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220428 09:18:48.853" endtime="20220428 09:18:51.533"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:18:51.821" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-407.png"&gt;&lt;img src="selenium-screenshot-407.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:18:51.533" endtime="20220428 09:18:51.821"/>
+</kw>
+<status status="PASS" starttime="20220428 09:18:38.506" endtime="20220428 09:18:51.821"/>
+</kw>
+<kw name="Então exibe o menu Activation Services" library="Menu">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>${MenuActivationServices}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220428 09:18:51.836" level="INFO">Current page contains element 'xpath://a[contains(.,'Activation Services')]'.</msg>
+<status status="PASS" starttime="20220428 09:18:51.822" endtime="20220428 09:18:51.836"/>
+</kw>
+<status status="PASS" starttime="20220428 09:18:51.822" endtime="20220428 09:18:51.837"/>
+</kw>
+<kw name="Dado eu clique no Menu Activation Services" library="ActivationServices">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MenuActivationServices}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:51.838" level="INFO">Clicking element 'xpath://a[contains(.,'Activation Services')]'.</msg>
+<status status="PASS" starttime="20220428 09:18:51.837" endtime="20220428 09:18:51.898"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Title_ActivationServices}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220428 09:18:51.898" endtime="20220428 09:18:52.196"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220428 09:18:54.204" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220428 09:18:52.196" endtime="20220428 09:18:54.204"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:18:54.371" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-408.png"&gt;&lt;img src="selenium-screenshot-408.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:18:54.204" endtime="20220428 09:18:54.371"/>
+</kw>
+<status status="PASS" starttime="20220428 09:18:51.837" endtime="20220428 09:18:54.371"/>
+</kw>
+<kw name="Então exibe o Activation Service atualizado" library="ActivationServices">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Filter_NameOrCode}</arg>
+<arg>Automationyddjah</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:54.373" level="INFO">Typing text 'Automationyddjah' into text field 'xpath://input[@id='InputCode']'.</msg>
+<status status="PASS" starttime="20220428 09:18:54.372" endtime="20220428 09:18:54.510"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220428 09:18:55.525" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220428 09:18:54.511" endtime="20220428 09:18:55.525"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Field_NameActivationService}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20220428 09:18:55.525" endtime="20220428 09:18:55.533"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Field_NameActivationService}</arg>
+<arg>Automationyddjah</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220428 09:18:55.548" level="INFO">Element 'xpath://a[contains(@href,'/ActivationServicesDetail')]//span' contains text 'Automationyddjah'.</msg>
+<status status="PASS" starttime="20220428 09:18:55.533" endtime="20220428 09:18:55.548"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Field_CodeActivationService}</arg>
+<arg>43050109</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220428 09:18:55.567" level="INFO">Element 'xpath://tr[@class='table-row']//td[2]//span' contains text '43050109'.</msg>
+<status status="PASS" starttime="20220428 09:18:55.548" endtime="20220428 09:18:55.567"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${Field_ActivationType}</arg>
+<arg>${Field_PORI}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20220428 09:18:55.585" level="INFO">Element 'xpath://tr[@class='table-row']//td[4]//span' contains text 'POR-I'.</msg>
+<status status="PASS" starttime="20220428 09:18:55.567" endtime="20220428 09:18:55.585"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:18:55.749" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-409.png"&gt;&lt;img src="selenium-screenshot-409.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:18:55.585" endtime="20220428 09:18:55.749"/>
+</kw>
+<status status="PASS" starttime="20220428 09:18:54.372" endtime="20220428 09:18:55.749"/>
+</kw>
+<kw name="Dado eu clique em um Activation Sevice existente" library="Instructions">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Link_ActivationService}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220428 09:18:55.750" level="INFO">Clicking element 'xpath://a[contains(@href,'/ActivationServicesDetail')]'.</msg>
+<status status="PASS" starttime="20220428 09:18:55.750" endtime="20220428 09:18:55.798"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220428 09:18:56.804" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220428 09:18:55.798" endtime="20220428 09:18:56.804"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:18:57.070" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-410.png"&gt;&lt;img src="selenium-screenshot-410.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:18:56.804" endtime="20220428 09:18:57.070"/>
+</kw>
+<status status="PASS" starttime="20220428 09:18:55.749" endtime="20220428 09:18:57.070"/>
+</kw>
+<kw name="Dado eu clique na label Instructions" library="Instructions">
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220428 09:18:59.077" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220428 09:18:57.071" endtime="20220428 09:18:59.077"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220428 09:19:04.077" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220428 09:18:59.077" endtime="20220428 09:19:04.077"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Label_Instructions}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220428 09:19:04.077" level="INFO">Clicking element 'xpath://div[@id='b20-Title']'.</msg>
+<msg timestamp="20220428 09:19:05.288" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-411.png"&gt;&lt;img src="selenium-screenshot-411.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220428 09:19:05.288" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="dividers full-width" id="b20-Title"&gt;...&lt;/div&gt; is not clickable at point (751, 691). Other element would receive the click: &lt;div data-container="" class="Footer" style="text-align: right;"&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01129943+2595139]
+	Ordinal0 [0x010BC9F1+2148849]
+	Ordinal0 [0x00FB4528+1066280]
+	Ordinal0 [0x00FE7621+1275425]
+	Ordinal0 [0x00FE5657+1267287]
+	Ordinal0 [0x00FE333B+1258299]
+	Ordinal0 [0x00FE207D+1253501]
+	Ordinal0 [0x00FD7AB3+1211059]
+	Ordinal0 [0x00FFB9EC+1358316]
+	Ordinal0 [0x00FD7474+1209460]
+	Ordinal0 [0x00FFBC04+1358852]
+	Ordinal0 [0x0100BAF2+1424114]
+	Ordinal0 [0x00FFB806+1357830]
+	Ordinal0 [0x00FD6086+1204358]
+	Ordinal0 [0x00FD6F96+1208214]
+	GetHandleVerifier [0x012CB232+1658114]
+	GetHandleVerifier [0x0138312C+2411516]
+	GetHandleVerifier [0x011BF261+560433]
+	GetHandleVerifier [0x011BE366+556598]
+	Ordinal0 [0x010C286B+2173035]
+	Ordinal0 [0x010C75F8+2192888]
+	Ordinal0 [0x010C76E5+2193125]
+	Ordinal0 [0x010D11FC+2232828]
+	BaseThreadInitThunk [0x76B16739+25]
+	RtlGetFullPathName_UEx [0x77098E7F+1215]
+	RtlGetFullPathName_UEx [0x77098E4D+1165]
+</msg>
+<status status="FAIL" starttime="20220428 09:19:04.077" endtime="20220428 09:19:05.301"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220428 09:19:05.302" endtime="20220428 09:19:05.302"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20220428 09:19:05.302" endtime="20220428 09:19:05.302"/>
+</kw>
+<status status="FAIL" starttime="20220428 09:18:57.070" endtime="20220428 09:19:05.302"/>
+</kw>
+<kw name="Close Session" library="Login" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220428 09:19:05.468" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-412.png"&gt;&lt;img src="selenium-screenshot-412.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220428 09:19:05.304" endtime="20220428 09:19:05.469"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220428 09:19:05.469" endtime="20220428 09:19:07.572"/>
+</kw>
+<status status="PASS" starttime="20220428 09:19:05.303" endtime="20220428 09:19:07.572"/>
+</kw>
+<tag>Teste19</tag>
+<status status="FAIL" starttime="20220428 09:18:38.505" endtime="20220428 09:19:07.573">ElementClickInterceptedException: Message: element click intercepted: Element &lt;div class="dividers full-width" id="b20-Title"&gt;...&lt;/div&gt; is not clickable at point (751, 691). Other element would receive the click: &lt;div data-container="" class="Footer" style="text-align: right;"&gt;...&lt;/div&gt;
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01129943+2595139]
+	Ordinal0 [0x010BC9F1+2148849]
+	Ordinal0 [0x00FB4528+1066280]
+	Ordinal0 [0x00FE7621+1275425]
+	Ordinal0 [0x00FE5657+1267287]
+	Ordinal0 [0x00FE333B+1258299]
+	Ordinal0 [0x00FE207D+1253501]
+	Ordinal0 [0x00FD7AB3+1211059]
+	Ordinal0 [0x00FFB9EC+1358316]
+	Ordinal0 [0x00FD7474+1209460]
+	Ordinal0 [0x00FFBC04+1358852]
+	Ordinal0 [0x0100BAF2+1424114]
+	Ordinal0 [0x00FFB806+1357830]
+	Ordinal0 [0x00FD6086+1204358]
+	Ordinal0 [0x00FD6F96+1208214]
+	GetHandleVerifier [0x012CB232+1658114]
+	GetHandleVerifier [0x0138312C+2411516]
+	GetHandleVerifier [0x011BF261+560433]
+	GetHandleVerifier [0x011BE366+556598]
+	Ordinal0 [0x010C286B+2173035]
+	Ordinal0 [0x010C75F8+2192888]
+	Ordinal0 [0x010C76E5+2193125]
+	Ordinal0 [0x010D11FC+2232828]
+	BaseThreadInitThunk [0x76B16739+25]
+	RtlGetFullPathName_UEx [0x77098E7F+1215]
+	RtlGetFullPathName_UEx [0x77098E4D+1165]
+</status>
+</test>
+<doc>Login test cases for WAM</doc>
+<status status="FAIL" starttime="20220428 09:18:38.311" endtime="20220428 09:19:07.576"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">Teste19</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Instructions">Instructions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
